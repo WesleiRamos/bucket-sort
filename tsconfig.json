@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "lib": ["es6", "dom", "es2017"]
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "cartas",
+  "version": "1.0.0",
+  "description": "App para demonstrar o funcionamento do algoritmo de ordenação bucket sort",
+  "homepage": "https://wesleiramos.github.io/bucket-sort",
+  "main": "index.js",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "npx parcel index.html",
+    "build": "npx parcel build index.html --dist-dir build --public-url .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Weslei Ramos",
+  "license": "MIT",
+  "dependencies": {
+    "@types/styled-components": "^5.1.26",
+    "drag-react": "^1.1.0",
+    "react": "^18.2.0",
+    "react-card-flip": "^1.1.5",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "gh-pages": "^4.0.0",
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
+  },
+  "alias": {
+    "assets": "./assets",
+    "hooks": "./src/hooks",
+    "provider": "./src/provider",
+    "utils": "./src/utils"
+  }
+}

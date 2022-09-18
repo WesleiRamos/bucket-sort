@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.vscode/
+.parcel-cache/
+dist/
+node_modules/
+build/
+tmp/
+temp/
+.env.oauth
+secret-key
