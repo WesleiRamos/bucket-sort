@@ -11,7 +11,7 @@ import {
 } from './styles'
 
 const sleep = (ms: number) => {
-  new Promise(resolve => setTimeout(resolve, ms))
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 const parseValue = text => {
