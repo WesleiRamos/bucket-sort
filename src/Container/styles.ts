@@ -16,6 +16,7 @@ export const Bucket = styled.div`
   text-align: center;
   background-color: rgb(255, 0, 0, 0.5);
   border-radius: 0 0 5px 5px;
+  user-select: none;
 `
 
 export const ContainerWrapper = styled.div`

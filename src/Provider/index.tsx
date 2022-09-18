@@ -77,7 +77,7 @@ const AppProvider = ({ children }) => {
    * @param buckets 
    */
   const setBuckets = (buckets: number) => {
-    setData({ ...data, buckets })
+    setData({ ...data, buckets: buckets || 0 })
   }
 
   /**

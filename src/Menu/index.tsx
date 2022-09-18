@@ -10,8 +10,14 @@ import {
   MenuButton
 } from './styles'
 
-const sleep = (ms: number) =>
+const sleep = (ms: number) => {
   new Promise(resolve => setTimeout(resolve, ms))
+}
+
+const parseValue = text => {
+  const value = parseInt(text.trim().replace(/[^-\d]/g, '') || '0')
+  return isNaN(value) ? 0 : value
+}
 
 const MenuOptions = () => {
   const { store, setBuckets, setGenerateVariables, generateCards } = useStore()
@@ -23,7 +29,7 @@ const MenuOptions = () => {
   const defineBucketOption = (option: 'current' | 'higher') => (e: React.ChangeEvent<HTMLInputElement>) => {
     setMenuOptions({
       ...bucketOptions,
-      [option]: parseInt(e.target.value.trim().replace(/[^\-\d]/g, '') || '0')
+      [option]: parseValue(e.target.value)
     })
   }
 
@@ -31,7 +37,7 @@ const MenuOptions = () => {
    * Define as variaveis da geração de cartas
    */
   const defineGenerateOptions = (option: 'min' | 'max' | 'count' | 'allowRepeated') => (e: React.ChangeEvent<HTMLInputElement>) => {
-    setGenerateVariables(option, parseInt(e.target.value.trim().replace(/[^\-\d]/g, '') || '0'))
+    setGenerateVariables(option, parseValue(e.target.value))
   }
 
   const pt1 = bucketOptions.current / bucketOptions.higher

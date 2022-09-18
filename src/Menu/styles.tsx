@@ -14,7 +14,8 @@ export const MenuWrapper = styled.div`
   box-shadow: 0 2px 15px 0 #f0f0f0;
   padding: 8px;
   transition: .1s;
-  width: 25px;
+  width: 30px;
+  min-width: 30px;
   position: relative;
   z-index: 999999999;
 
@@ -24,6 +25,7 @@ export const MenuWrapper = styled.div`
 
   &.opened {
     width: 300px;
+    min-width: 300px;
 
     ${ToggleButton} i {
       transform: rotate(180deg);
@@ -58,6 +60,7 @@ export const MenuInputLabel = styled.label`
 `
 
 export const MenuButton = styled.button`
+  box-sizing: border-box;
   background-color: #f0f0f0;
   border: 1px solid #f0f0f0;
   border-radius: 4px;
